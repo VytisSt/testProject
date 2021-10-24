@@ -9,6 +9,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+        // 1 pack Variables
+
         // 2 uzduotis
 //
 //        int a = (int) (Math.random()*5);
@@ -58,6 +61,61 @@ public class Main {
 
 //        int a = (int) (1+(Math.random()*10));
 //        System.out.println(a);
+
+        // 5
+//
+//        int a = (int) (Math.random()*3);
+//        int b = (int) (Math.random()*3);
+//        int c = (int) (Math.random()*3);
+//        int d = (int) (Math.random()*3);
+//        System.out.println(a+""+b+""+c+""+d);
+//
+//        int zeros = 0;
+//        int ones = 0;
+//        int twos = 0;
+//
+//        if(a==0) {
+//            zeros++;
+//        }
+//        if(a==1) {
+//            ones++;
+//        }
+//        if(a==2) {
+//            twos++;
+//        }
+//        if(b==0) {
+//            zeros++;
+//        }
+//        if(b==1) {
+//            ones++;
+//        }
+//        if(b==2) {
+//            twos++;
+//        }
+//        if(c==0) {
+//            zeros++;
+//        }
+//        if(c==1) {
+//            ones++;
+//        }
+//        if(c==2) {
+//            twos++;
+//        }
+//        if(d==0) {
+//            zeros++;
+//        }
+//        if(d==1) {
+//            ones++;
+//        }
+//        if(d==2) {
+//            twos++;
+//        }
+//
+//        System.out.println("Zeroes: "+zeros+" Ones: "+ones+" Twos: "+twos);
+
+
+        // 6
+
 
 
 
@@ -224,14 +282,147 @@ public class Main {
 //
 
 
+//
+//long currentTime = new java.sql.Timestamp(System.currentTimeMillis()).getTime();
+//        System.out.println(currentTime);
+//        long years = currentTime/1000/60/60/24/365;
+//
+//        System.out.println(years);
+//
+//        long minutes = currentTime;
 
-long currentTime = new java.sql.Timestamp(System.currentTimeMillis()).getTime();
-        System.out.println(currentTime);
-        long years = currentTime/1000/60/60/24/365;
 
-        System.out.println(years);
+// LOOPS
 
-        long minutes = currentTime;
+        //1
+//    int count = 0;
+//    for(int i = 0; i<301; i++) {
+//        int a = (int) (Math.random()*300);
+//        if(a>150) {
+//            count++;
+//        }
+//        if(a>275) {
+//            System.out.print("["+a+"] ");
+//        } else {
+//            System.out.print(a+" ");
+//        }
+//    }
+//    System.out.println("\nLarger than 150: "+count);
+//
+
+    //2
+//    String comma = "";
+//    for(int i = 0; i<3001; i++) {
+//        if(i%77==0) {
+//            System.out.print(comma+i);
+//            comma = ",";
+//        }
+//    }
+
+    //3, 4
+    int countRed = 0;
+    int countRed2 = 100;
+
+    for (int i = 0; i<101; i++) {
+        System.out.println("");
+        for (int y = 0; y<101; y++) {
+            if(countRed==y || countRed2==y) {
+                System.out.print("0");
+
+            } else {
+                System.out.print("*");
+            }
+        }
+        countRed++;
+        countRed2--;
+    }
+
+
+    // 5
+
+
+//        int r = -1;
+//        int i = 0;
+//
+//        while(i<3) {
+//            r = (int) (Math.random() * 2);
+//            System.out.println(r);
+//            if(r==0) {
+//                i++;
+//            }
+//        }
+
+//        int r = -1;
+//        int i = 0;
+//
+//        while(i<3) {
+//            r = (int) (Math.random() * 2);
+//            System.out.println(r);
+//            if(r==0) {
+//                i++;
+//            } else {
+//                i=0;
+//            }
+//        }
+
+    //6
+
+//    int p = 0;
+//    int k = 0;
+//
+//    while(p<222 && k<222) {
+//        p += (int) (10+(Math.random()*(20-10)));
+//        k += (int) (5+(Math.random()*(25-5)));
+//    }
+//
+//    System.out.println("Petras surinko "+p+" taškų; Kazys surinko "+k+" taškų.");
+//    if(p>k) {
+//        System.out.println("Partiją laimėjo: Petras");
+//    } else if (k>p) {
+//        System.out.println("Partiją laimėjo: Kazys");
+//    } else {
+//        System.out.println("Lygiosios!");
+//    }
+//
+    //7
+
+        int lines = 21;
+
+        for (int i = 0; i<lines; i++) {
+            System.out.println("");
+            if (i<=(lines/2)) {
+                for (int c = 0; c < lines; c++) {
+                    if (c == (lines / 2) || (c <= (lines / 2 + i) && c >= (lines / 2 - i))) {
+                        System.out.print("*");
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+            } else if (i>(lines/2)){
+                for (int c = 0; c < lines; c++) {
+                    if (c == (lines / 2) || ((c <= lines-(i-(lines/2-1))) && (c >= (i-lines/2)) )) {
+                        System.out.print("*");
+
+                    } else {
+                        System.out.print(" ");
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
