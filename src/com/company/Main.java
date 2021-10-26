@@ -722,24 +722,24 @@ public class Main {
 
         String[] temp = new String[combos.length];
         int unique = 0;
+        int z = 0;
         for (int i = 0; i < combos.length; i++) {
             int duplicates = 0;
-            for(int a = 0; a< combos.length; a++) {
+            for(int a = 0; a < combos.length; a++) {
+                if(!Arrays.asList(temp).contains(combos[i])) {
+                    temp[z] = combos[i];
+                    z++;
+                }
                 if(a!=i && combos[i].equals(combos[a])) {
                     duplicates++;
                 }
             }
-
             if(duplicates==0) {
                 unique++;
-            } else {
-                for (int b = 0; b < temp.length; b++) {
-                    if(!combos[i].equals(temp[b])) {
-                        temp[i] = combos[i];
-                    }
-                }
             }
+
         }
+
         System.out.println("");
         int duplicates = 0;
         for(String s: temp) {
@@ -749,10 +749,11 @@ public class Main {
             }
         }
 
-
-
         System.out.println("");
-        System.out.println("Unikalių kombinacijų: " + unique+" Viso kombinacijų: "+(unique+dupli));
+        System.out.println("Unikalių kombinacijų: " + unique+" Viso kombinacijų: "+(duplicates));
+
+        //6
+
 
 
 
