@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.sql.Array;
 import java.util.Arrays;
 import java.util.Locale;
 import java.util.Random;
@@ -10,9 +11,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // 1 pack Variables
+        // 1  VARIABLES, IFs
 
-        // 2 uzduotis
+        // 2
 //
 //        int a = (int) (Math.random()*5);
 //        int b = (int) (Math.random()*5);
@@ -115,8 +116,82 @@ public class Main {
 
 
         // 6
+//
+//        int a = (int) (Math.random()*21) - 10;
+//        int b = (int) (Math.random()*21) - 10;
+//        int c = (int) (Math.random()*21) - 10;
+//
+//        if(a<0) {
+//            System.out.println("["+a+"]");
+//        }
+//        if(a==0) {
+//            System.out.println("(0)");
+//        }
+//        if(a>0) {
+//            System.out.println("{"+a+"}");
+//        }
+//
+//        if(b<0) {
+//            System.out.println("["+b+"]");
+//        }
+//        if(b==0) {
+//            System.out.println("(0)");
+//        }
+//        if(b>0) {
+//            System.out.println("{"+b+"}");
+//        }
+//
+//        if(c<0) {
+//            System.out.println("["+c+"]");
+//        }
+//        if(c==0) {
+//            System.out.println("(0)");
+//        }
+//        if(c>0) {
+//            System.out.println("{"+c+"}");
+//        }
 
+        //7
+//        int p = 1;
+////        int q = (int) (Math.random()*2996)+5;
+////
+////        if(q<1000) {
+////            System.out.println("Žvakių kiekis: "+q+"; žvakių kaina: "+p*q);
+////        }
+////
+////        if(q*p*0.97>2000) {
+////            System.out.println("Žvakių kiekis: "+q+"; žvakių kaina: "+p*0.96*q);
+////        } else if (q>1000) {
+////            System.out.println("Žvakių kiekis: "+q+"; žvakių kaina: "+p*0.97*q);
+////        }
 
+        //8
+//
+//        int a = (int) (Math.random()*101);
+//        int b = (int) (Math.random()*101);
+//        int c = (int) (Math.random()*101);
+//        int sum = 0;
+//        int i = 0;
+//
+//        System.out.println(a+" "+b+" "+c);
+//
+//        System.out.println((a+b+c)/3);
+//
+//        if(a>=10 && a<=90) {
+//            sum+=a;
+//            i++;
+//        }
+//        if(b>=10 && b<=90) {
+//            sum+=b;
+//            i++;
+//        }
+//        if(c>=10 && c<=90) {
+//            sum+=c;
+//            i++;
+//        }
+//
+//        System.out.println(sum/i);
+//
 
 
         // 9 uzduotis
@@ -189,6 +264,7 @@ public class Main {
 //        }
 
 
+
 //        Užduotys 2 Stringai
 
      // 1
@@ -247,6 +323,22 @@ public class Main {
 //    }
 //    System.out.println(i);
 //
+
+        //9
+//
+//    StringBuilder sb = new StringBuilder(3);
+//
+//    String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//
+//    for(int i = 0; i<3; i++) {
+//        int index = (int) (letters.length()* Math.random());
+//
+//        sb.append(letters.charAt(index));
+//    }
+//        System.out.println(sb);
+
+    // 10
+
 
 
 
@@ -320,22 +412,22 @@ public class Main {
 //    }
 
     //3, 4
-    int countRed = 0;
-    int countRed2 = 100;
-
-    for (int i = 0; i<101; i++) {
-        System.out.println("");
-        for (int y = 0; y<101; y++) {
-            if(countRed==y || countRed2==y) {
-                System.out.print("0");
-
-            } else {
-                System.out.print("*");
-            }
-        }
-        countRed++;
-        countRed2--;
-    }
+//    int countRed = 0;
+//    int countRed2 = 100;
+//
+//    for (int i = 0; i<101; i++) {
+//        System.out.println("");
+//        for (int y = 0; y<101; y++) {
+//            if(countRed==y || countRed2==y) {
+//                System.out.print("0");
+//
+//            } else {
+//                System.out.print("*");
+//            }
+//        }
+//        countRed++;
+//        countRed2--;
+//    }
 
 
     // 5
@@ -385,30 +477,251 @@ public class Main {
 //    }
 //
     //7
+//
+//        int lines = 21;
+//
+//        for (int i = 0; i<lines; i++) {
+//            System.out.println("");
+//            if (i<=(lines/2)) {
+//                for (int c = 0; c < lines; c++) {
+//                    if (c == (lines / 2) || (c <= (lines / 2 + i) && c >= (lines / 2 - i))) {
+//                        System.out.print("*");
+//                    } else {
+//                        System.out.print(" ");
+//                    }
+//                }
+//            } else if (i>(lines/2)){
+//                for (int c = 0; c < lines; c++) {
+//                    if (c == (lines / 2) || ((c <= lines-(i-(lines/2-1))) && (c >= (i-lines/2)) )) {
+//                        System.out.print("*");
+//
+//                    } else {
+//                        System.out.print(" ");
+//                    }
+//                }
+//            }
+//        }
 
-        int lines = 21;
 
-        for (int i = 0; i<lines; i++) {
-            System.out.println("");
-            if (i<=(lines/2)) {
-                for (int c = 0; c < lines; c++) {
-                    if (c == (lines / 2) || (c <= (lines / 2 + i) && c >= (lines / 2 - i))) {
-                        System.out.print("*");
-                    } else {
-                        System.out.print(" ");
-                    }
-                }
-            } else if (i>(lines/2)){
-                for (int c = 0; c < lines; c++) {
-                    if (c == (lines / 2) || ((c <= lines-(i-(lines/2-1))) && (c >= (i-lines/2)) )) {
-                        System.out.print("*");
+//4 ARRAYS
 
-                    } else {
-                        System.out.print(" ");
-                    }
-                }
-            }
+        //1
+    int[] array = new int[30];
+
+    for(int i = 0; i<array.length;i++) {
+        array[i] = (int) (Math.random()*21)+5;
+    }
+
+    for(int s : array) {
+        System.out.print(s+" ");
+    }
+        System.out.println("");
+//
+//
+//    //2
+        //a
+//    int a = 0;
+//    for(int s : array) {
+//        if(array[s]>10) {
+//            a++;
+//        }
+//    }
+//        System.out.println("Viso skaičių, didesnių negu 10: "+ a);
+//
+//    //b
+//
+//    int largest = 0;
+//
+//    for(int s : array) {
+//        if(array[s]>largest) {
+//            largest=array[s];
+//        }
+//    }
+//        System.out.println("Didžiausio indeksas: "+s);
+//
+//  //c
+//
+
+//    int sum = 0;
+//  for(int i =0; i<array.length;i++) {
+//      if(i%2==0) {
+//          sum+=array[i];
+//      }
+//  }
+//        System.out.println("Lyginių indeksų suma: "+sum);
+
+//d
+//
+//int[] array2 = new int[30];
+//
+//for(int i = 0; i<array2.length;i++) {
+//    array2[i] = array[i]-i;
+//}
+//for(int s : array2) {
+//    System.out.print(s+" ");
+//}
+//
+////e
+//
+//    int[] array3 = new int[40];
+//
+//        for (int i = 0; i < 30; i++) {
+//            array3[i] = array2[i];
+//        }
+//        for(int i=30;i<array3.length;i++) {
+//            array3[i] = (int) (Math.random()*21)+5;
+//        }
+//        array2=array3;
+//
+//        System.out.println("\narray2: ");
+//        for(int s : array2) {
+//            System.out.print(s+" ");
+//        }
+//
+//        //f
+//
+//        int even = 0;
+//        int odd = 0;
+//
+//        for(int s: array2) {
+//            if(s%2==0) {
+//                even++;
+//            } else {
+//                odd++;
+//            }
+//        }
+//        int[] evenArr = new int[even];
+//        int[] oddArr = new int[odd];
+//
+//
+//        int evenIndex = 0;
+//        int oddIndex = 0;
+//        for(int s: array2) {
+//            if(s%2==0) {
+//                evenArr[evenIndex] = s;
+//                evenIndex++;
+//            } else {
+//                oddArr[oddIndex] = s;
+//                oddIndex++;
+//            }
+//        }
+//        System.out.println("");
+//        System.out.println("EVEN: ");
+//        for(int s: evenArr) {
+//            System.out.print(s+" ");
+//        }
+//        System.out.println("");
+//        System.out.println("ODD: ");
+//        for(int s: oddArr) {
+//            System.out.print(s+" ");
+//        }
+//        System.out.println("");
+//
+////g
+//
+//    for(int i = 1; i<array.length;i++) {
+//        if((array[i]%2==0) && array[i]>15) {
+//            array[i] = 0;
+//        }
+//    }
+//    for(int s: array) {
+//            System.out.print(s+" ");
+//        }
+//        System.out.println("");
+//    //h
+//        System.out.println("");
+//        for (int i = 0; i < array.length; i++) {
+//            if(array[i]>10) {
+//                System.out.println(i);
+//                break;
+//            }
+//        }
+//        System.out.println("");
+//        //3
+//
+//        String[] stringArr = new String[200];
+//
+//        String abc = "ABCD";
+//
+//        for (int i = 0; i < stringArr.length; i++) {
+//            stringArr[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
+//        }
+//
+//        for(String s: stringArr) {
+//            System.out.print(s);
+//        }
+//
+//        System.out.println("");
+//
+//        int a = 0;
+//        int b = 0;
+//        int c = 0;
+//        int d = 0;
+//        for (int i = 0; i < stringArr.length; i++) {
+//            if(stringArr[i].equals("A")) {
+//                a++;
+//            }
+//            if(stringArr[i].equals("B")) {
+//                b++;
+//            }
+//            if(stringArr[i].equals("C")) {
+//                c++;
+//            }
+//            if(stringArr[i].equals("D")) {
+//                d++;
+//            }
+//        }
+//        System.out.println("A: "+a+" B: "+b+" C: "+c+" D: "+d);
+
+        //4
+//
+//            Arrays.sort(stringArr);
+//            for(String s : stringArr) {
+//                System.out.print(s);
+//            }
+        //5
+        String[] abcd1 = new String[200];
+        String[] abcd2 = new String[200];
+        String[] abcd3 = new String[200];
+
+        String abc = "ABCD";
+
+        for (int i = 0; i < abcd1.length; i++) {
+            abcd1[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
         }
+        for (int i = 0; i < abcd2.length; i++) {
+            abcd2[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
+        }
+        for (int i = 0; i < abcd3.length; i++) {
+            abcd3[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
+        }
+
+        for(String s: abcd1) {
+            System.out.print(s);
+        }
+        System.out.println("");
+        for(String s: abcd2) {
+            System.out.print(s);
+        }
+        System.out.println("");
+        for(String s: abcd3) {
+            System.out.print(s);
+        }
+        System.out.println("");
+        String[] combos = new String[abcd1.length];
+
+        for(int i = 0; i<combos.length; i++) {
+            combos[i] = abcd1[i] +abcd2[i] + abcd3[i];
+
+        }
+        for(String s: combos) {
+            System.out.print(s+" ");
+        }
+
+
+
+
+
 
 
 
