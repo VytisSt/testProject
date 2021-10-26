@@ -718,6 +718,41 @@ public class Main {
             System.out.print(s+" ");
         }
 
+        System.out.println("");
+
+        String[] temp = new String[combos.length];
+        int unique = 0;
+        for (int i = 0; i < combos.length; i++) {
+            int duplicates = 0;
+            for(int a = 0; a< combos.length; a++) {
+                if(a!=i && combos[i].equals(combos[a])) {
+                    duplicates++;
+                }
+            }
+
+            if(duplicates==0) {
+                unique++;
+            } else {
+                for (int b = 0; b < temp.length; b++) {
+                    if(!combos[i].equals(temp[b])) {
+                        temp[i] = combos[i];
+                    }
+                }
+            }
+        }
+        System.out.println("");
+        int duplicates = 0;
+        for(String s: temp) {
+            System.out.print(s+" ");
+            if(s!=null) {
+                duplicates++;
+            }
+        }
+
+
+
+        System.out.println("");
+        System.out.println("Unikalių kombinacijų: " + unique+" Viso kombinacijų: "+(unique+dupli));
 
 
 
