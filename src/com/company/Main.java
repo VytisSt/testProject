@@ -712,7 +712,6 @@ public class Main {
 
         for(int i = 0; i<combos.length; i++) {
             combos[i] = abcd1[i] +abcd2[i] + abcd3[i];
-
         }
         for(String s: combos) {
             System.out.print(s+" ");
@@ -737,7 +736,6 @@ public class Main {
             if(duplicates==0) {
                 unique++;
             }
-
         }
 
         System.out.println("");
