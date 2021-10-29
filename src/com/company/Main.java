@@ -2,14 +2,13 @@ package com.company;
 
 
 import java.sql.Array;
-import java.util.Arrays;
-import java.util.Locale;
-import java.util.Random;
-import java.util.Scanner;
+import java.time.Year;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
         // 1  VARIABLES, IFs
 
@@ -264,10 +263,9 @@ public class Main {
 //        }
 
 
-
 //        Užduotys 2 Stringai
 
-     // 1
+        // 1
 //    String a = "Mackenzie";
 //    String b = "Davis";
 //
@@ -311,7 +309,7 @@ public class Main {
 //        System.out.println(Arrays.asList(gen.trim().split(" ")));
 //
 //
-    //8
+        //8
 //
 //    String str = "Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale";
 //    String[] arr = str.split(" ");
@@ -337,12 +335,7 @@ public class Main {
 //    }
 //        System.out.println(sb);
 
-    // 10
-
-
-
-
-
+        // 10
 
 
 // Scanner
@@ -402,7 +395,7 @@ public class Main {
 //    System.out.println("\nLarger than 150: "+count);
 //
 
-    //2
+        //2
 //    String comma = "";
 //    for(int i = 0; i<3001; i++) {
 //        if(i%77==0) {
@@ -411,7 +404,7 @@ public class Main {
 //        }
 //    }
 
-    //3, 4
+        //3, 4
 //    int countRed = 0;
 //    int countRed2 = 100;
 //
@@ -430,7 +423,7 @@ public class Main {
 //    }
 
 
-    // 5
+        // 5
 
 
 //        int r = -1;
@@ -457,7 +450,7 @@ public class Main {
 //            }
 //        }
 
-    //6
+        //6
 
 //    int p = 0;
 //    int k = 0;
@@ -476,7 +469,7 @@ public class Main {
 //        System.out.println("Lygiosios!");
 //    }
 //
-    //7
+        //7
 //
 //        int lines = 21;
 //
@@ -506,16 +499,16 @@ public class Main {
 //4 ARRAYS
 
         //1
-    int[] array = new int[30];
-
-    for(int i = 0; i<array.length;i++) {
-        array[i] = (int) (Math.random()*21)+5;
-    }
-
-    for(int s : array) {
-        System.out.print(s+" ");
-    }
-        System.out.println("");
+//    int[] array = new int[30];
+//
+//    for(int i = 0; i<array.length;i++) {
+//        array[i] = (int) (Math.random()*21)+5;
+//    }
+//
+//    for(int s : array) {
+//        System.out.print(s+" ");
+//    }
+//        System.out.println("");
 //
 //
 //    //2
@@ -680,122 +673,161 @@ public class Main {
 //                System.out.print(s);
 //            }
         //5
-        String[] abcd1 = new String[200];
-        String[] abcd2 = new String[200];
-        String[] abcd3 = new String[200];
-
-        String abc = "ABCD";
-
-        for (int i = 0; i < abcd1.length; i++) {
-            abcd1[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
-        }
-        for (int i = 0; i < abcd2.length; i++) {
-            abcd2[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
-        }
-        for (int i = 0; i < abcd3.length; i++) {
-            abcd3[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
-        }
-
-        for(String s: abcd1) {
-            System.out.print(s);
-        }
-        System.out.println("");
-        for(String s: abcd2) {
-            System.out.print(s);
-        }
-        System.out.println("");
-        for(String s: abcd3) {
-            System.out.print(s);
-        }
-        System.out.println("");
-        String[] combos = new String[abcd1.length];
-
-        for(int i = 0; i<combos.length; i++) {
-            combos[i] = abcd1[i] +abcd2[i] + abcd3[i];
-        }
-        for(String s: combos) {
-            System.out.print(s+" ");
-        }
-
-        System.out.println("");
-
-        String[] temp = new String[combos.length];
-        int unique = 0;
-        int z = 0;
-        for (int i = 0; i < combos.length; i++) {
-            int duplicates = 0;
-            for(int a = 0; a < combos.length; a++) {
-                if(!Arrays.asList(temp).contains(combos[i])) {
-                    temp[z] = combos[i];
-                    z++;
-                }
-                if(a!=i && combos[i].equals(combos[a])) {
-                    duplicates++;
-                }
-            }
-            if(duplicates==0) {
-                unique++;
-            }
-        }
-
-        System.out.println("");
-        int duplicates = 0;
-        for(String s: temp) {
-            System.out.print(s+" ");
-            if(s!=null) {
-                duplicates++;
-            }
-        }
-
-        System.out.println("");
-        System.out.println("Unikalių kombinacijų: " + unique+" Viso kombinacijų: "+(duplicates));
+//        String[] abcd1 = new String[200];
+//        String[] abcd2 = new String[200];
+//        String[] abcd3 = new String[200];
+//
+//        String abc = "ABCD";
+//
+//        for (int i = 0; i < abcd1.length; i++) {
+//            abcd1[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
+//        }
+//        for (int i = 0; i < abcd2.length; i++) {
+//            abcd2[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
+//        }
+//        for (int i = 0; i < abcd3.length; i++) {
+//            abcd3[i] = String.valueOf(abc.charAt((int) (Math.random()*4)));
+//        }
+//
+//        for(String s: abcd1) {
+//            System.out.print(s);
+//        }
+//        System.out.println("");
+//        for(String s: abcd2) {
+//            System.out.print(s);
+//        }
+//        System.out.println("");
+//        for(String s: abcd3) {
+//            System.out.print(s);
+//        }
+//        System.out.println("");
+//        String[] combos = new String[abcd1.length];
+//
+//        for(int i = 0; i<combos.length; i++) {
+//            combos[i] = abcd1[i] +abcd2[i] + abcd3[i];
+//        }
+//        for(String s: combos) {
+//            System.out.print(s+" ");
+//        }
+//
+//        System.out.println("");
+//
+//        String[] temp = new String[combos.length];
+//        int unique = 0;
+//        int z = 0;
+//        for (int i = 0; i < combos.length; i++) {
+//            int duplicates = 0;
+//            for(int a = 0; a < combos.length; a++) {
+//                if(!Arrays.asList(temp).contains(combos[i])) {
+//                    temp[z] = combos[i];
+//                    z++;
+//                }
+//                if(a!=i && combos[i].equals(combos[a])) {
+//                    duplicates++;
+//                }
+//            }
+//            if(duplicates==0) {
+//                unique++;
+//            }
+//        }
+//
+//        System.out.println("");
+//        int duplicates = 0;
+//        for(String s: temp) {
+//            System.out.print(s+" ");
+//            if(s!=null) {
+//                duplicates++;
+//            }
+//        }
+//
+//        System.out.println("");
+//        System.out.println("Unikalių kombinacijų: " + unique+" Viso kombinacijų: "+(duplicates));
 
         //6
 
 
+        // METHODS
+
+//    String[] array = {"dfg", "sdf4ert", "rwetrwe", "erqw"};
+//       printStringArray(array);
+
+
+//    ArrayList<Integer> betterArray = new ArrayList<>();
+//    betterArray.add(7);
+//    betterArray.add(7);
+//    System.out.println(betterArray.size());
+
+
+//       getAge(1089);
+        ArrayList<String> tasks = new ArrayList<>();
+        while(true) {
+            System.out.println("įvesk užduotį: ");
+            String task = scanner.nextLine();
+            if(task.equals(("x"))) {
+                break;
+            }
+            tasks.add(task);
+        }
+        System.out.println("Užduotys: ");
+        for (int i = 0; i < tasks.size(); i++) {
+            System.out.println(tasks.get(i));
+        }
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+//        System.out.println("Enter name: ");
+//        String name = scanner.nextLine();
+//        System.out.println("Enter surname: ");
+//        name += " "+scanner.nextLine();
+//        getInitials(name);
+//    }
+//
+//    public static void getInitials(String name) {
+//        String[] arr = name.split(" ");
+//        String initials = arr[0].substring(0, 1) + arr[1].substring(0,1)+".";
+//        System.out.println(capitalize(initials));
+//
+//    }
+//
+//    public static String capitalize(String s) {
+//        return s.toUpperCase(Locale.ROOT);
+//    }
+//
+//
+//
+//
+//    public static void getAge(int year){
+//        System.out.println(Year.now().getValue()-year);
+//        for (int i = year; i > 2 ; i--) {
+//            int counter = 0;
+//            for (int a = i; a >= 1; a--) {
+//                if(i%a==0) {
+//                    counter++;
+//                }
+//            }
+//            if(counter==2) {
+//                System.out.print(i+" ");
+//            }
+//        }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
